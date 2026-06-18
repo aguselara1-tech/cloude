@@ -1,0 +1,9 @@
+Conclusiones generales del TP3:
+
+1. La red multiclase con softmax resolvió correctamente el problema 2D. En la baseline con sigmoide se obtuvo accuracy de evaluación = 0.9727.
+2. Aumentar el número de épocas mejora el ajuste hasta entrar en una zona de rendimientos decrecientes; en esta implementación pasar de 100 a 300 épocas produjo la mejora más fuerte.
+3. El learning rate demasiado chico entrena muy lento, mientras que valores intermedios/altos funcionaron mejor en este problema simple.
+4. La arquitectura importa: redes demasiado chicas pueden quedarse cortas y redes más profundas no siempre mejoran si no se ajusta bien el entrenamiento.
+5. Refinar la grilla aumenta la cantidad/calidad de datos y también el tiempo de entrenamiento. En este problema la frontera es simple, así que incluso con pocos puntos se logra un desempeño alto.
+6. El mini-batch alcanzó alta accuracy en menos épocas, aunque en esta implementación vectorizada simple el tiempo total no siempre fue menor que full-batch por el costo del loop en Python.
+7. ReLU mostró una convergencia muy competitiva: accuracy de evaluación = 0.9710, con menor loss que la comparación sigmoidea a igual orden de complejidad.
